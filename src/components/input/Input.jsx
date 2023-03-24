@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from './Input.styled';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/contactSlice';
+import { addContact } from 'redux/operations';
 
 export const Input = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ export const Input = () => {
       name,
       number,
     };
-    const saveContact = contacts.find(contact => contact.name === name);
+    const saveContact = contacts.items.find(contact => contact.name === name);
     if (saveContact) {
       return alert('Contact is already added!');
     }

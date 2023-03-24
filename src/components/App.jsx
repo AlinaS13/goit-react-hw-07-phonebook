@@ -4,6 +4,7 @@ import { Input } from './input';
 
 import { Contacts } from './contacts';
 import { FilterContacts } from './filter-contacts';
+// import axios from 'axios';
 
 export const App = () => {
   return (
